@@ -6,41 +6,58 @@ import java.util.Scanner;
 
 public class Exercise2 {
 	
-	 public static void main(String[] args) {
+	public static String[] sortStrings(String[] a)
+	{
+	Arrays.sort(a);
+	int n=a.length;
+	String[] b=a;
+	if(n%2!=0) {
+	int m=(n/2)+1;
+	for(int i=0;i<m;i++) {
+	b[i]=a[i].toUpperCase();
+	}
+	for(int j=m;j<n;j++)
+	{
+	b[j]=a[j].toLowerCase();
+	}
 
-	        Scanner sc = new Scanner(System.in);
-	        System.out.println("Enter the string");
-	        int n = sc.nextInt();
-	        String[] str = new String[n];
-	        //sc.next();
-	        for (int i1 = 0; i1 < n; i1++) {
-	            str[i1] = sc.next();
-	        }
-	        String result[] = sortString(str);
-	        for (int i = 0; i < n; i++) {
-	            System.out.println(result[i] + " ");
-	        }
-	        sc.close();
+	}
+	else
+	{
+	int m=n/2;
+	for(int i=0;i<m;i++) {
+	b[i]=a[i].toUpperCase();
+	}
+	for(int j=m;j<n;j++)
+	{
+	b[j]=a[j].toLowerCase();
+	}
 
-	    }
-	    private static String[] sortString(String input[]) {
-	        String[] result = input;
-	        Arrays.sort(input);
-	        System.out.println("Array after getting sorted.."+Arrays.toString(input));
-	        int arraylen = input.length;
-	        int mid = arraylen / 2;
-	        if (arraylen % 2 != 0) {
-	            mid = arraylen / 2 + 1;
-	        }
-	        for (int i = 0; i < mid; i++) {
-	            result[i] = input[i].toUpperCase();
-	        }
-	        for (int i = mid + 1; i < arraylen; i++) {
-	            result[i] = input[i].toLowerCase();
+	}
+	return b;
+	}
 
-	        }
 
-	        return result;
+
+	public static void main(String args[])
+	{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the value of n");
+	int p=sc.nextInt();
+	String q[]=new String[p];
+	System.out.println("Enter the strings: ");
+	for(int i=0;i<p;i++)
+	{
+	q[i]=sc.next();
+	}
+	Exercise2 e=new Exercise2();
+	String[] result=e.sortStrings(q);
+	System.out.println("The resulting  string array is ");
+	for(int i=0;i<p;i++)
+	{
+	System.out.println(result[i]+" ");
+	}
+	
 	}
 
 }
