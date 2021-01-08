@@ -1,3 +1,7 @@
+/**
+*Author: Prasanna
+*Desc: Reverse Array
+*/
 package lab2;
 
 import java.util.Arrays;
@@ -7,11 +11,11 @@ import java.util.Scanner;
 public class Exercise3 {
 	
 	private static int[] getSorted(int arr[]) {
-		int len = arr.length;
+		int len = arr.length;        // to get array length //
 		int array1[] = new int[len];
 		String str[] = new String[len];
 		for(int i =0;i<len;i++) {
-			str[i] = Integer.toString(arr[i]);
+			str[i] = Integer.toString(arr[i]);  //Convert the numbers to String to reverse it  //
 			
 		StringBuffer s = new StringBuffer(str[i]);
 		array1[i] = Integer.parseInt(s.reverse().toString());
@@ -21,7 +25,7 @@ public class Exercise3 {
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter no:of array elements");
+		System.out.println("Enter no:of array elements");  // enter the no.of array elements //
 		int n = sc.nextInt();
 		int arr[] = new int[n];
 		for(int i = 0;i<n;i++) {

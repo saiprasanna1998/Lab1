@@ -1,3 +1,7 @@
+/**
+*Author: Prasanna
+*Desc: SEcond smallest element in array
+*/
 package lab2;
 
 import java.util.Scanner;
@@ -6,14 +10,15 @@ public class Exercise1 {
 
 	private static void getSecondSmallest(int[] array) {
 		int temp;
-		int size = array.length;
+		int size = array.length;   /* There should be atleast two elements */
 		if (size < 2)  
 	    {  
 	        System.out.println(" Invalid Input ");  
 	        return;  
 	    }   
-	    for(int i = 0; i<size; i++ ){
-	         for(int j = i+1; j<size; j++){
+	    for(int i = 0; i<size; i++ ){    /* If current element is smaller than first  
+	        								then update both first and second */
+	    	for(int j = i+1; j<size; j++){
 	            if(array[i]>array[j]){
 	               temp = array[i];
 	               array[i] = array[j];

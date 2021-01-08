@@ -1,15 +1,19 @@
+/**
+*Author: Prasanna
+*Desc: program to sort a string alphabetically
+*/
 package lab2;
 
 import java.util.Arrays;
 
 import java.util.Scanner;
 
-public class Exercise2 {
+public class Exercise2 {   // Method to sort a mixed string //
 	
 	public static String[] sortStrings(String[] a)
 	{
 	Arrays.sort(a);
-	int n=a.length;
+	int n=a.length;  // the string length //
 	String[] b=a;
 	if(n%2!=0) {
 	int m=(n/2)+1;
