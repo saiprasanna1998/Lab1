@@ -19,7 +19,7 @@ public class Exercise5 {
 
 			int lineCount = 0;
 
-			BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\HP\\Documents\\sample.txt"));
+			BufferedReader reader = new BufferedReader(new FileReader("C:\\Downloads\\lab_3.txt"));
 
 			String currentLine = reader.readLine();
 			
